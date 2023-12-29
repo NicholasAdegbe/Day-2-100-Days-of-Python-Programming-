@@ -1,0 +1,102 @@
+#Data Types
+
+# Strings(Subscripting-Pulling the position of a character)
+print('Hello'[0])
+print('Hello'[4])
+print('123' + '456')
+
+# Integer
+print(123+345)
+
+# Floats
+print(3.123)
+
+# Boolean(Onpy 2 values)
+True
+False
+# Type Function(Tells the type of data you have)
+num_char= len(input('What is your name? '))
+print(type(num_char))
+
+# Converting to other data types-Because you can only add strings not integers
+new_num_char = str(num_char)
+print('Your name has ' + new_num_char +' characters')
+
+# Mathematical operations
+# Addition
+print(2+2)
+# Subtraction
+print(2-2)
+# Multiplication
+print(4*2)
+# Division
+print(8/2)
+# Exponents
+print(2**3)
+# Modulus
+print(8 % 2)
+
+# Order of Priority - PEMDAS
+# Parentheses
+# Exponenents
+# Multiplication and Division
+# Addition and Subtraction
+print(3*3+3/3-3)
+
+# Rounding numbers
+print(round(8/3,1))
+
+EX. BMI Calculator
+# 1st input: enter height in meters e.g: 1.65
+height = input()
+# 2nd input: enter weight in kilograms e.g: 72
+weight = input()
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
+BMI=int(weight)/float(height)**2
+print(int(BMI))
+
+
+# Floor Division
+print(8//3)
+
+# Performing Multiple operations
+Score=0
+Score+=3
+print(Score)
+
+# F strings- Helps you concatenate differnt data types without using plus signs without converting data types
+height=1.8
+isWinning=True
+print(f'Your score is {Score}')
+
+# Ex. - Age Convertion
+age = input()
+# 🚨 Don't change the code above 👆
+# Write your code below this line 👇
+int_age=int(age)
+num_year_left = 90-int_age
+num_weeks_left = 52*num_year_left
+print(f'You have {num_weeks_left} weeks left.')
+
+
+# EX. Tip Calculator
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Format the result to 2 decimal places = 33.60
+
+#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+
+#Write your code below this line 👇
+print('Welcome to the tip calculator')
+total_bill = float(input('What was the total bill? $'))
+tip_percentage = int(input('What percentage tip would you like to give? 10, 12, or 15? '))
+num_persons = int(input('How many people to split the bill?'))
+
+total_with_tip = total_bill + (total_bill * (tip_percentage / 100))
+
+final_bill_per_person = round(total_with_tip / num_persons, 2) 
+
+print(f'Each person should pay: ${final_bill_per_person}')
